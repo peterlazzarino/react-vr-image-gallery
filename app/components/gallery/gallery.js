@@ -1,4 +1,3 @@
-import SpaceSphere from "../solar-system/spaceSphere";
 import React from "react";
 import { imageTypes } from "./imageTypes";
 import {
@@ -31,45 +30,68 @@ class Gallery extends React.Component{
         };
         this.imageStyles = StyleSheet.create(this.imageDimensions);
         this.calculateWidth = this.calculateWidth.bind(this);
+        this.getImageWidths = this.getImageWidths.bind(this);
+        this.getStartPosition = this.getStartPosition.bind(this);
+    }
+    getImageWidths(images){
+        return images.map(image => this.imageDimensions[image.type].width);
     }
     calculateWidth(images){
-        return images.map(image => this.imageDimensions[image.type].width).reduce((a, c) => a + c);
+        return this.getImageWidths(images).reduce((a, c) => a + c);
+    }
+    getStartPosition(images){
+        const boxWidth = 38.5;
+        const basePosition = -(boxWidth / 2);
+        return -(basePosition + (images.length / 2) * boxWidth);
     }
     render(){
         const { images } = this.props;
-        debugger;
         const containerWidth = this.calculateWidth(images);
+        const startPosition = this.getStartPosition(images);        
         return (
-            <CylindricalPanel layer={{width: containerWidth, height: 500}} 
-                style={{
-                    transform: [
-                        { translateX: 0 },
-                        { translateY: 0 },
-                        { translateZ: 0 }
-                    ]
-                }}>
-                <View style={{
-                    opacity: 1,
-                    flex:1,
-                    flexDirection:"row",
-                    width: containerWidth,
-                    height: 500,
-                    backgroundColor:"white",
-                    justifyContent: 'flex-start',
-                }} >      
-                    {this.props.images.map((image) => {
-                        const imageStyle = this.imageStyles[image.type];
-                        return (
-                            <Image
-                                style={[imageStyle, {
-                                    backgroundColor: 'black',
-                                }]}
-                                source={image.source}
-                            />   
-                        )
-                    })}                          
-                </View>
-            </CylindricalPanel>
+            <View>
+                <CylindricalPanel layer={{width: containerWidth, height: 500}} 
+                    style={{
+                        transform: [
+                            { rotateY: startPosition }
+                        ]
+                    }}>
+                    <View style={{
+                        opacity: 1,
+                        flex:1,
+                        flexDirection:"row",
+                        width: containerWidth,
+                        height: 500,
+                        backgroundColor:"white",
+                        justifyContent: 'flex-start',
+                    }} >      
+                        {this.props.images.map((image) => {
+                            const imageStyle = this.imageStyles[image.type];
+                            return (
+                                <Image
+                                    style={[imageStyle, {
+                                        flex:1,
+                                        flexDirection:"column",
+                                        backgroundColor: 'black',
+                                    }]}
+                                    source={image.source}
+                                />   
+                            )
+                        })}                          
+                    </View>
+                    <View style={{
+                        position:"absolute",
+                        height:200,
+                        width:200,
+                        backgroundColor:"red",
+                        transform: [{
+                            translate: [5,0,-55]
+                        }]
+                    }}>
+                        <Text style={{color:"white"}}>Hey</Text>
+                    </View>
+                </CylindricalPanel>
+            </View>
         )
     }
 }
