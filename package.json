@@ -1,11 +1,11 @@
 {
   "name": "react-vr-image-gallery",
-  "version": "0.0.1",
+  "version": "0.4.0",
   "scripts": {
     "start": "node -e \"console.log('open browser at http://localhost:8081/vr/\\n\\n');\" && node node_modules/react-native/local-cli/cli.js start",
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
-    "build": "babel app/gallery --ignore __tests__ --out-dir ./dist --copy-files",
+    "build": "babel package --ignore __tests__ --out-dir ./dist --copy-files",
     "devtools": "react-devtools",
     "test": "jest"
   },

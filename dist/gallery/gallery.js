@@ -1,4 +1,4 @@
-Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName="app/gallery/gallery/gallery.js";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=require("react");var _react2=_interopRequireDefault(_react);
+Object.defineProperty(exports,"__esModule",{value:true});var _jsxFileName="package/gallery/gallery/gallery.js";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _react=require("react");var _react2=_interopRequireDefault(_react);
 var _imageTypes=require("./imageTypes");
 var _gazeButton=require("../button/gazeButton");var _gazeButton2=_interopRequireDefault(_gazeButton);
 var _reactVr=require("react-vr");
@@ -12,8 +12,7 @@ var _reactVr=require("react-vr");
 
 
 
-var _galleryImage=require("./galleryImage");var _galleryImage2=_interopRequireDefault(_galleryImage);
-var _index=require("../../index.vr");var _index2=_interopRequireDefault(_index);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var
+var _galleryImage=require("./galleryImage");var _galleryImage2=_interopRequireDefault(_galleryImage);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var
 
 Gallery=function(_React$Component){_inherits(Gallery,_React$Component);
 function Gallery(props){_classCallCheck(this,Gallery);var _this=_possibleConstructorReturn(this,(Gallery.__proto__||Object.getPrototypeOf(Gallery)).call(this,
@@ -80,16 +79,16 @@ var imageStyle=this.imageDimensions[this.props.type].style;
 var canNext=imageNumber<images.length;
 var canPrev=imageNumber>1;
 return(
-_react2.default.createElement(_reactVr.View,{__source:{fileName:_jsxFileName,lineNumber:83}},
+_react2.default.createElement(_reactVr.View,{__source:{fileName:_jsxFileName,lineNumber:82}},
 _react2.default.createElement(_reactVr.Animated.View,{
 style:{
 transform:[
-{rotateY:galleryRotation}]},__source:{fileName:_jsxFileName,lineNumber:84}},
+{rotateY:galleryRotation}]},__source:{fileName:_jsxFileName,lineNumber:83}},
 
 
 _react2.default.createElement(_reactVr.CylindricalPanel,{layer:{
 width:containerWidth,
-height:500},__source:{fileName:_jsxFileName,lineNumber:90}},
+height:500},__source:{fileName:_jsxFileName,lineNumber:89}},
 
 _react2.default.createElement(_reactVr.View,{style:{
 opacity:1,
@@ -97,7 +96,7 @@ flex:1,
 flexDirection:"row",
 width:containerWidth,
 height:500,
-justifyContent:'flex-start'},__source:{fileName:_jsxFileName,lineNumber:94}},
+justifyContent:'flex-start'},__source:{fileName:_jsxFileName,lineNumber:93}},
 
 this.props.images.map(function(image,idx){
 isSelected=idx+1==imageNumber;
@@ -105,14 +104,14 @@ return(
 _react2.default.createElement(_galleryImage2.default,{
 imageStyle:imageStyle,
 src:image,
-isSelected:isSelected,__source:{fileName:_jsxFileName,lineNumber:105}}));
+isSelected:isSelected,__source:{fileName:_jsxFileName,lineNumber:104}}));
 
 
 })))),
 
 
 
-_react2.default.createElement(_reactVr.View,{__source:{fileName:_jsxFileName,lineNumber:115}},
+_react2.default.createElement(_reactVr.View,{__source:{fileName:_jsxFileName,lineNumber:114}},
 _react2.default.createElement(_gazeButton2.default,{disabled:!canPrev,onClick:this.goToPrev,
 buttonStyle:{
 borderRadius:1,
@@ -127,14 +126,14 @@ borderColor:"#222"},
 containerStyle:{
 position:"absolute",
 transform:[{
-translate:[-1.5,.1,-2]}]},__source:{fileName:_jsxFileName,lineNumber:116}},
+translate:[-1.5,.1,-2]}]},__source:{fileName:_jsxFileName,lineNumber:115}},
 
 
 _react2.default.createElement(_reactVr.Text,{style:{
 color:"white",
 bottom:.01,
 fontSize:.15,
-fontWeight:"bold"},__source:{fileName:_jsxFileName,lineNumber:133}},
+fontWeight:"bold"},__source:{fileName:_jsxFileName,lineNumber:132}},
 
 "<")),
 
@@ -153,14 +152,14 @@ borderColor:"#222"},
 containerStyle:{
 position:"absolute",
 transform:[{
-translate:[1.25,.1,-2]}]},__source:{fileName:_jsxFileName,lineNumber:142}},
+translate:[1.25,.1,-2]}]},__source:{fileName:_jsxFileName,lineNumber:141}},
 
 
 _react2.default.createElement(_reactVr.Text,{style:{
 color:"white",
 bottom:.01,
 fontSize:.15,
-fontWeight:"bold"},__source:{fileName:_jsxFileName,lineNumber:159}},
+fontWeight:"bold"},__source:{fileName:_jsxFileName,lineNumber:158}},
 
 ">")))));
 
