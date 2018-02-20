@@ -4,6 +4,7 @@ VR image gallery with transition animations and gaze-enabled control buttons.
 
 Currently supports square images only, will add more. Restrictions due to react-vr image constraints requiring exact image measurements for rendering. [https://facebook.github.io/react-vr/docs/images.html](More information here).
 
+![Preview image](https://media.giphy.com/media/NlF6CTWiw7pEb8xdPA/giphy.gif)
 
 ### Sample usage
 
