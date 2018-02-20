@@ -7,12 +7,10 @@ import {
 } from 'react-vr';
 
 export default class GazeAwareButton extends React.Component{
-
 	static defaultProps = {
         selectTimeout: 1000,
         progressColor: "#46A032" 
     };
-    
     constructor(props){
         super(props);
         this.onEnter = this.onEnter.bind(this);

@@ -1,8 +1,8 @@
-# react-vr-image-gallery
+##react-vr-image-gallery
 
 VR image gallery with transition animations and gaze-enabled control buttons.
 
-Currently supports square images only, will add more. Restrictions due to react-vr image constraints requiring exact image measurements for rendering. [More info on react-vr images](https://facebook.github.io/react-vr/docs/images.html).
+Currently supports square images only, will add more. Restrictions due to react-vr image constraints requiring exact image measurements for rendering. [https://facebook.github.io/react-vr/docs/images.html](More information here).
 
 
 ### Sample usage
@@ -31,3 +31,7 @@ export default class ImageGallery extends React.Component {
   }
 };
 ```
+
+Next and prev buttons can be clicked or looked at for 1 second to navigate. Will add props to adjust timing and add other screen sizes in the future.
+
+Suggestions for future features are welcome.

@@ -15,6 +15,9 @@ import {
 import GalleryImage from "./galleryImage";
 
 class Gallery extends React.Component{
+	static defaultProps = {
+        type: imageTypes.SQUARE,
+    };
     constructor(props){
         super(props);
         this.imageDimensions = {
