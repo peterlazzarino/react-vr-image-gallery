@@ -16,27 +16,14 @@ export default class image_gallery extends React.Component {
   render() {
     return (
       <View>
-          <Gallery images={[
-            { 
-              type: imageTypes.SQUARE,
-              source: asset("sun.jpg") 
-            }, 
-            { 
-              type: imageTypes.SQUARE,
-              source: asset("star_bg.jpg") 
-            }, 
-            { 
-              type: imageTypes.SQUARE,
-              source: asset("earth.jpg") 
-            },
-            { 
-              type: imageTypes.SQUARE,
-              source: asset("sun.jpg") 
-            },
-            { 
-              type: imageTypes.SQUARE,
-              source: asset("earth_alt.jpg") 
-            }]
+          <Pano source={asset("star_bg.jpg")} />
+          <Gallery type={imageTypes.SQUARE} initialImage={1} images={[
+              asset("sun.jpg"),
+              asset("star_bg.jpg"),
+              asset("earth.jpg"),
+              asset("sun.jpg"),
+              asset("earth_alt.jpg") 
+            ]
           }/>
       </View>
     );
