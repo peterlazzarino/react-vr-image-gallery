@@ -1,4 +1,4 @@
-#react-vr-image-gallery
+##react-vr-image-gallery
 
 VR image gallery with transition animations and control buttons.
 
