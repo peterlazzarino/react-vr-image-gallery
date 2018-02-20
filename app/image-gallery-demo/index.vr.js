@@ -12,7 +12,7 @@ export default class image_gallery_demo extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={asset('chess-world.jpg')}/>
+        <Pano source={asset('star_bg.jpg')}/>
         <Text
           style={{
             backgroundColor: '#777879',
@@ -25,13 +25,14 @@ export default class image_gallery_demo extends React.Component {
             textAlignVertical: 'center',
             transform: [{translate: [0, 1.8, -3]}],
           }}>
-          hello
+          CATS!
         </Text>
           <Gallery type={imageTypes.SQUARE} initialImage={1} images={[
-              asset("sun.jpg"),
-              asset("star.jpg"),
-              asset("earth.jpg"),
-              asset("earth.jpg") 
+              asset("1.jpeg"),
+              asset("2.jpeg"),
+              asset("3.jpeg"),
+              asset("4.jpeg"),
+              asset("5.jpeg") 
             ]
           }/>
       </View>
