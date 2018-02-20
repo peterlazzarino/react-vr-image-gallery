@@ -1,0 +1,1 @@
+Object.defineProperty(exports,"__esModule",{value:true});var _gallery=require("./gallery/gallery");var _gallery2=_interopRequireDefault(_gallery);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}exports.default=_gallery2.default;

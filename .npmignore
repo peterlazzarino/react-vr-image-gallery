@@ -1,0 +1,5 @@
+node_modules  
+app
+.babelrc
+.watchmanconfig
+package-lock.json

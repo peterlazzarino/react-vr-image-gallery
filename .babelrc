@@ -1,0 +1,8 @@
+{
+  "presets": ["react-native"],
+  "ignore": [
+    "*-compiled*",
+    "*.js.map*",
+    "node_modules*"
+  ]
+}
